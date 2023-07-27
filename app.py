@@ -13,8 +13,8 @@ final_rating=pickle.load(open('final_rating_book.pkl','rb'))
 def index():
     return render_template('index.html',book_name=list(popular_df['Book-Title'].values),
                     rating=list(popular_df['avgrating'].values),
-                    author=list(popular_df['Book-Author_x'].values),
-                    image=list(popular_df['Image-URL-M_x'].values),
+                    author=list(popular_df['Book-Author'].values),
+                    image=list(popular_df['Image-URL-M'].values),
                     vote=list(popular_df['num_of_rating'].values),
                     )
 
